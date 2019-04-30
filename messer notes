@@ -1,35 +1,37 @@
-IP Into:
-  (https://github.com/justindcoleman/networkplus-notes/blob/master/tcp%20packet.PNG)
-  TCP => layer 4, multiplexing, connection-oriented, error recovery, ack messages, flow control
-  UDP => layer 4, multiplexing, connectionless, no error recovery, no ack, no flow control
-  location => ip_address:port#
-  IPv4 => server ip address, protocol, server application port number / client ip, protocol, client port number
-  non-ephemeral ports => 0-1023, permanent
-  ephemeral ports => 1024-65535, determined in real time by client
-  port numbers are for communication, not security
-  (https://github.com/justindcoleman/networkplus-notes/blob/master/packets%20w%20ports.PNG)
+1.0
+    IP Into:
+        (https://github.com/justindcoleman/networkplus-notes/blob/master/tcp%20packet.PNG)
+        TCP => layer 4, multiplexing, connection-oriented, error recovery, ack messages, flow control
+        UDP => layer 4, multiplexing, connectionless, no error recovery, no ack, no flow control
+        location => ip_address:port#
+        IPv4 => server ip address, protocol, server application port number / client ip, protocol, client port number
+        non-ephemeral ports => 0-1023, permanent
+        ephemeral ports => 1024-65535, determined in real time by client
+        port numbers are for communication, not security
+        (https://github.com/justindcoleman/networkplus-notes/blob/master/packets%20w%20ports.PNG)
  TCP port numbers aren't the same as UDP (i.e. http on traffic on TCP port 80 doesn't cause an issue for traffic on UDP port 80)
  ICMP: allows devices to check in on each other, administrative uses
  
-Common Ports:
-  well known port numbers: https://github.com/justindcoleman/networkplus-notes/blob/master/ports.pdf
-  telnet: TCP 23 - unencrypted remote control/management software
-  SSH: TCP 22 - encrypted remote control/management software
-  DNS: UDP 53 - translates alphanumeric (& dashes) into numerical IP addresses
-  SMTP: TCP 25 - server to server email transfer, client to server email transfer
-  SFTP: TCP 22 - uses SSH as underlying protocol, fulll featured & encrypted (resuming, directory list, remote file removal) file transfer
-  FTP: TCP 20 (active mode data transfer) / TCP 21 (control information between client and server) - unencrypted file transfer (list, add, delete), authenticates with username & password
-  TFTP: UDP 69 - unencrypted file transfer with no authentication needed
-  DHCP: UDP 67, 68 - automated config of IP addresses, subnet mask, and other options, requires a DHCP server, leases addresses from an assigned pool which must be renewed at set intervals, allows DHCP reservatins based on MAC addresses
-  HTTP: TCP 80 - web server communication
-  HTTPS: TCP 443 - web server communication with encryption
-  SNMPv3: UDP 161 - simple network management protocol, gather statistics from network devices, encrypted with authentication
-  RDP: TCP 3389 - screen/input remote sharing/control, supports full machine or application, Windows based
-  NTP: UDP 123 - synchronizing clocks between devices, automatic, frequency is flexible
-  SIP: TCP 5056, 5061 - set up and manage VoIP sessions, supports video conferencing, instant messaging, file transfer
-  SMB: TCP 445 - (also called CIFS) file & print sharing for Windows, communicates without NetBIOS support
-  POP: TCP 110 - receive emails from an email server (auth & transfer)
-  IMAP4: TCP 143 - receive emails from an email server (auth & transfer), includes management of mail box from multiple clients
-  LDAP: TCP 389 - store and retrieve information in a network directory
-  LDAPS: TCP 636 - LDAP over SSL
-  H.323: TCP 1720 - VoIP, set up and manage VoIP sessions
+1.1
+    Common Ports:
+        well known port numbers: https://github.com/justindcoleman/networkplus-notes/blob/master/ports.pdf
+        telnet: TCP 23 - unencrypted remote control/management software
+        SSH: TCP 22 - encrypted remote control/management software
+        DNS: UDP 53 - translates alphanumeric (& dashes) into numerical IP addresses
+        SMTP: TCP 25 - server to server email transfer, client to server email transfer
+        SFTP: TCP 22 - uses SSH as underlying protocol, fulll featured & encrypted (resuming, directory list, remote file removal) file transfer
+        FTP: TCP 20 (active mode data transfer) / TCP 21 (control information between client and server) - unencrypted file transfer (list, add, delete), authenticates with username & password
+        TFTP: UDP 69 - unencrypted file transfer with no authentication needed
+        DHCP: UDP 67, 68 - automated config of IP addresses, subnet mask, and other options, requires a DHCP server, leases addresses from an assigned pool which must be renewed at set intervals, allows DHCP reservatins based on MAC addresses
+        HTTP: TCP 80 - web server communication
+        HTTPS: TCP 443 - web server communication with encryption
+        SNMPv3: UDP 161 - simple network management protocol, gather statistics from network devices, encrypted with authentication
+        RDP: TCP 3389 - screen/input remote sharing/control, supports full machine or application, Windows based
+        NTP: UDP 123 - synchronizing clocks between devices, automatic, frequency is flexible
+        SIP: TCP 5056, 5061 - set up and manage VoIP sessions, supports video conferencing, instant messaging, file transfer
+        SMB: TCP 445 - (also called CIFS) file & print sharing for Windows, communicates without NetBIOS support
+        POP: TCP 110 - receive emails from an email server (auth & transfer)
+        IMAP4: TCP 143 - receive emails from an email server (auth & transfer), includes management of mail box from multiple clients
+        LDAP: TCP 389 - store and retrieve information in a network directory
+        LDAPS: TCP 636 - LDAP over SSL
+        H.323: TCP 1720 - VoIP, set up and manage VoIP sessions
