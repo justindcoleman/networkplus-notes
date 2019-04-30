@@ -1,12 +1,14 @@
 IP Into:
-  TCP => layer 4, multiplexing, connection-oriented, error recovery, ack messages, flow control, 
+  (https://github.com/justindcoleman/networkplus-notes/blob/master/tcp%20packet.PNG)
+  TCP => layer 4, multiplexing, connection-oriented, error recovery, ack messages, flow control
   UDP => layer 4, multiplexing, connectionless, no error recovery, no ack, no flow control
   location => ip_address:port#
   IPv4 => server ip address, protocol, server application port number / client ip, protocol, client port number
   non-ephemeral ports => 0-1023, permanent
   ephemeral ports => 1024-65535, determined in real time by client
   port numbers are for communication, not security
-  well known port numbers: https://www.dropbox.com/s/udpkfosy0s78e6r/ports.pdf?dl=0
+  (https://github.com/justindcoleman/networkplus-notes/blob/master/packets%20w%20ports.PNG)
+  well known port numbers: https://github.com/justindcoleman/networkplus-notes/blob/master/ports.pdf
  TCP port numbers aren't the same as UDP (i.e. http on traffic on TCP port 80 doesn't cause an issue for traffic on UDP port 80)
  ICMP: allows devices to check in on each other, administrative uses
  
